@@ -1,3 +1,7 @@
 fastapi[standard]
 sqlalchemy
 alembic
+pyjwt
+pwdlib[argon2]
+python-multipart
+python-dotenv
