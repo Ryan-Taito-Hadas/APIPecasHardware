@@ -1,44 +1,66 @@
-# Inventário de Hardware
+Inventário de Hardware
 
 API REST para gerenciar peças de computador, desenvolvida com Python e FastAPI.
 
-## Funcionalidades
+Funcionalidades
 
-- Cadastrar peças
-- Listar todas as peças
-- Buscar peça por ID
-- Atualizar peças
-- Excluir peças
+Cadastrar peças
 
-## Tecnologias utilizadas
+Listar todas as peças
 
-- Python
-- FastAPI
-- Pydantic
+Buscar peça por ID
 
-## Como executar o projeto
+Atualizar peças
 
-1. Instale o Python.
-2. Abra o terminal na pasta do projeto.
-3. Crie o ambiente virtual:
+Excluir peças
 
-   `python -m venv .venv`
+Tecnologias utilizadas
 
-4. Ative o ambiente virtual no Windows:
+Python
 
-   `.\.venv\Scripts\Activate.ps1`
+FastAPI
 
-5. Instale as dependências:
+Pydantic
 
-   `python -m pip install -r requirements.txt`
+SQLAlchemy
 
-6. Inicie a API:
+SQLite
 
-   `python -m uvicorn main:app --reload`
+Alembic
 
-7. Acesse a documentação pelo navegador:
+Como executar o projeto
 
-   http://127.0.0.1:8000/docs
+Instale o Python.
+
+Abra o terminal na pasta do projeto.
+
+Crie o ambiente virtual:
+
+python -m venv .venv
+
+Ative o ambiente virtual no Windows:
+
+.\.venv\Scripts\Activate.ps1
+
+Instale as dependências:
+
+python -m pip install -r requirements.txt
+
+Execute as migrações do banco de dados:
+
+alembic upgrade head
+
+Inicie a API:
+
+python -m uvicorn main:app --reload
+
+Acesse a documentação pelo navegador:
+
+http://127.0.0.1:8000/docs
+
+Observação
+
+Os dados são armazenados em um banco de dados SQLite e permanecem salvos mesmo após o servidor ser reiniciado.
 
 ## Observação
 
